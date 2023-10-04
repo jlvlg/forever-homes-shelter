@@ -1,0 +1,15 @@
+{
+  "name": "jlvlg-forever-homes-shelter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "browser-sync start -c bs-config.js"
+  },
+  "author": "Jose Lucas Vinicius Lopes Gama",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "typescript": "^5.2.2"
+  }
+}
