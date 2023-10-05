@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    --transparent-min: #FFFFFF30;
+    --transparent-middle: #FFFFFF80;
+    --transparente-max: #FFFC;
+    --pink: #FF3D9A;
+    --purple-light: #937AFF;
+    --purple: #5758F1;
+    --blue-light: #3F96FC;
+    --green: #04C27F;
+    --green-light: #41CC4F;
+    --yellow-dark: #F1D06E;
+    --yellow: #F8DB46;
+    --yellow-light: #FEF7C1;
+    --yellow-min: #FFF9E1;
+    --white: #FFF;
+    --gray-light: #F5F5F5;
+    --gray-dark: #37383F;
+    --black: #1E1F27;
+}
+
+a, button {
+    all: unset;
+}
+
+body {
+    padding-inline: 11.87vi;
+}
+
+#navbar {
+    color: var(--black);
+    padding-block: 30px;
+    border-block-end: 2px solid var(--black);
+    font-size: 20px;
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+}
+
+.navbar-icon, #navbar-list {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-list {
+    text-wrap: nowrap;
+    gap: 1.56vi;
+    margin: 0;
+}
+
+.navbar-item {
+    display: inline;
+}
+
+#navbar-phone {
+    margin-inline-start: auto;
+    margin-inline-end: 0.93vi;
+}
+
+#navbar-home-icon {
+    block-size: 48px;
+    margin-inline-start: 12px;
+    margin-inline-end: calc(12px + 1.25vi);
+    margin-block: 12px;
+}
+
+#navbar-phone-icon {
+    block-size: 24px;
+    margin-inline-end: 0.93vi;
+}
+
+#navbar-donate {
+    border-radius: 32px;
+    padding-block: 16px;
+    padding-inline: 32px;
+    background: var(--pink);
+    color: var(--white);
+    font-family: Poppins, sans-serif;
+}
+
+#navbar-donate-icon {
+    block-size: 32px;
+    margin-inline-end: 0.6vi;
+}
+
+#main-footer {
+    padding-block: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--black);
+}
+
+#main-footer-brand {
+    display: flex;
+    inline-size: 272px;
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+    align-items: flex-start;
+    font-weight: 700;
+    gap: 19px;
+}
+
+#main-footer-logo {
+    block-size: 100px;
+}
+
+#main-footer-name {
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 100%;
+    font-size: 36px;
+}
+
+#main-footer-heart-icon {
+    block-size: 36px;
+    fill: var(--pink);
+    position: relative;
+    inset-inline-end: 7px;
+    inset-block-start: 3px;
+}
+
+#main-footer-slogan {
+    line-height: 32px;
+    margin: 0;
+}
+
+#main-footer-aside {
+    flex-basis: 100%;
+}
