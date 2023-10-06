@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 html {
@@ -24,6 +24,13 @@ html {
 
 button,
 nav *,
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+dl,
 address,
 address * {
   all: unset;
@@ -35,11 +42,12 @@ address li {
 }
 
 body {
-  padding-inline: 7.67vi;
+  background-color: var(--gray-light);
   margin: 0;
 }
 
 #navbar {
+  margin-inline: 7.67vi;
   color: var(--black);
   padding-block: 30px;
   border-block-end: 2px solid var(--black);
@@ -48,51 +56,65 @@ body {
   font-weight: 700;
 }
 
-.navbar-icon,
-#navbar-list {
+#navbar-list,
+#navbar-home,
+#navbar-phone {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 #navbar-list {
   text-wrap: nowrap;
-  gap: 1.32vi;
-  margin: 0;
+  gap: 20px;
+}
+
+#navbar-end {
+  margin-inline-start: auto;
+  margin-inline-end: 12px;
 }
 
 #navbar-phone {
-  margin-inline-start: auto;
-  margin-inline-end: 2.11vi;
+  gap: 12px;
 }
 
-#navbar-home-icon {
+#navbar-phone > img {
+  block-size: 24px;
+}
+
+#navbar-home {
+  gap: 16px;
+}
+
+#navbar-home > img {
   block-size: 48px;
-  margin-inline-start: 12px;
-  margin-inline-end: calc(12px + 1.05vi);
+  margin-inline: 12px;
   margin-block: 12px;
 }
 
-#navbar-phone-icon {
-  block-size: 24px;
-  margin-inline-end: 0.79vi;
-}
-
-#navbar-donate {
+.button {
   border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   padding-block: 16px;
   padding-inline: 32px;
-  background: var(--pink);
-  color: var(--white);
   font-family: Poppins, sans-serif;
 }
 
-#navbar-donate-icon {
+.button > img {
   block-size: 32px;
-  margin-inline-end: 0.52vi;
+}
+
+.donate-button {
+  background: var(--pink);
+  color: var(--white);
 }
 
 #main-footer {
   margin-block: 80px 60px;
+  padding-inline: 7.67vi;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -104,7 +126,6 @@ body {
 
 #main-footer-brand {
   display: flex;
-  inline-size: 272px;
   flex-direction: column;
   font-family: Poppins, sans-serif;
   align-items: flex-start;
@@ -117,6 +138,7 @@ body {
 
 #main-footer-name {
   text-transform: uppercase;
+  max-inline-size: 180px;
   margin: 0;
   line-height: 100%;
   font-size: 36px;
@@ -166,6 +188,7 @@ body {
   font-weight: 700;
   line-height: 160%; /* 51.2px */
   letter-spacing: -0.64px;
+  margin-inline: 7.67vi;
 }
 
 #slogan > em {
