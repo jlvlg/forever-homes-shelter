@@ -67,7 +67,7 @@
   block-size: 100%;
   border-radius: 600px;
   background-color: var(--yellow-dark);
-  inset-inline-end: 20px;
+  inset-inline-start: 190px;
   overflow: hidden;
 }
 
@@ -85,8 +85,8 @@
   border-radius: 24px 134px 134px 134px;
   border: 6px solid var(--gray-light);
   overflow: hidden;
-  inset-inline-end: 273px;
-  inset-block-end: 0;
+  inset-inline-start: 45px;
+  inset-block-end: 0px;
 }
 
 #landing-dog > img {
@@ -97,12 +97,12 @@
 }
 
 #landing-house {
-  inset-inline-end: 405px;
-  inset-block-start: 36px;
+  inset-inline-start: 20px;
+  inset-block-start: 35px;
 }
 
 #landing-collar {
-  inset-inline-end: 78px;
+  inset-inline-start: 310px;
   inset-block-end: 55px;
 }
 
@@ -299,7 +299,117 @@
 }
 
 #adoption {
+  padding-inline: 7.67vi;
   padding-block: 80px 120px;
   display: grid;
-  grid: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 24px 40px;
+  grid:
+    "a a" min-content
+    "b c" 1fr / 1fr 1fr;
+}
+
+#adoption > h2 {
+  grid-area: a;
+  text-align: center;
+  color: var(--black);
+  font-family: Poppins, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.12px;
+}
+
+#adoption-photos {
+  block-size: 616px;
+  position: relative;
+}
+
+#adoption-photos > * {
+  position: absolute;
+}
+
+#adoption-dog {
+  background-color: var(--purple);
+  border-radius: 600px;
+  inline-size: 377px;
+  block-size: 584px;
+  overflow: hidden;
+  inset-inline-end: 100px;
+  inset-block-start: 16px;
+}
+
+#adoption-dog > img {
+  position: absolute;
+  block-size: 110%;
+  inset-block-start: 80px;
+  inset-inline-end: 50px;
+  transform: scaleX(-1);
+}
+
+#adoption-cat {
+  inline-size: 268px;
+  block-size: 268px;
+  overflow: hidden;
+  border-radius: 10% 50% 50% 50%;
+  inset-inline-end: 20px;
+  inset-block-start: 330px;
+  border: 6px solid var(--gray-light);
+  background-color: var(--yellow-dark);
+}
+
+#adoption-cat > img {
+  position: absolute;
+  inset-block-end: 0px;
+  inline-size: 90%;
+}
+
+#adoption-bone {
+  inset-inline-end: 420px;
+  inset-block-start: 25px;
+}
+
+#adoption-collar {
+  inset-inline-end: 210px;
+  inset-block-start: 275px;
+  transform: scaleX(-1);
+}
+
+#adoption > section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+#adoption > section > h3 {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.64px;
+}
+
+#adoption > section > ul {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--gray-dark);
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+#adoption > section li {
+  display: list-item;
+  margin-block-end: 15px;
+}
+
+#adoption button {
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 28px;
 }

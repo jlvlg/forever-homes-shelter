@@ -101,6 +101,7 @@ body {
   padding-block: 16px;
   padding-inline: 32px;
   font-family: Poppins, sans-serif;
+  font-size: 20px;
 }
 
 .button > img {
