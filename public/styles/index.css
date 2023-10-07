@@ -522,18 +522,23 @@
   background-color: var(--black);
   display: flex;
   padding-block: 80px 120px;
+  justify-content: center;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+#adoptables :is(header, hgroup) {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  gap: 40px;
-  position: relative;
 }
 
-#adoptables > hgroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#adoptables header {
+  gap: 40px;
+}
+
+#adoptables hgroup {
   gap: 60px;
 }
 
@@ -577,23 +582,22 @@
 }
 
 #adoptables > div {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
-  block-size: 400px;
-  inset-block-end: 0px;
+  inset-block-end: -120px;
   inline-size: 300px;
 }
 
 #adoptables > div:nth-of-type(1) {
-  inset-inline-start: 13vi;
+  order: -1;
 }
 
 #adoptables-fish {
   block-size: 65px;
   position: absolute;
   inset-inline-end: 45px;
-  inset-block-start: 5px;
+  inset-block-start: -115px;
 }
 
 #adoptables-cat {
@@ -601,14 +605,10 @@
   inset-block-end: 0px;
 }
 
-#adoptables > div:nth-of-type(2) {
-  inset-inline-end: 13vi;
-}
-
 #adoptables-bone {
   block-size: 80px;
-  inset-block-start: 5px;
   inset-inline-start: 45px;
+  inset-block-start: -115px;
   position: absolute;
 }
 

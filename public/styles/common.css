@@ -94,6 +94,7 @@ body {
 }
 
 .button {
+  block-size: 64px;
   border-radius: 32px;
   display: flex;
   justify-content: center;
