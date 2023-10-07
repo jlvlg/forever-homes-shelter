@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles/common.css" />
     <link rel="stylesheet" href="styles/index.css" />
@@ -70,24 +70,24 @@
             </ul>
           </nav>
         </section>
-        <ul id="landing-photos">
-          <li id="landing-cat">
+        <section id="landing-photos">
+          <div id="landing-cat">
             <img src="assets/images/tabby-cat.png" alt="Tabby cat looking up" />
-          </li>
-          <li id="landing-collar">
+          </div>
+          <div id="landing-collar">
             <img
               src="assets/icons/collar.svg"
               alt="A drawing of a pet collar on the tabby cat" />
-          </li>
-          <li id="landing-dog">
+          </div>
+          <div id="landing-dog">
             <img src="assets/images/pug.png" alt="An image of a pug" />
-          </li>
-          <li id="landing-house">
+          </div>
+          <div id="landing-house">
             <img
               src="assets/icons/house-thought.svg"
               alt="A drawing of a house-shaped thought bubble with a pink heart inside" />
-          </li>
-        </ul>
+          </div>
+        </section>
       </section>
       <section id="accomplishments">
         <h2>With your help, we accomplished these goals</h2>
@@ -233,26 +233,26 @@
       </section>
       <section id="adoption">
         <h2>Adoption information</h2>
-        <ul id="adoption-photos">
-          <li id="adoption-dog">
+        <section id="adoption-photos">
+          <div id="adoption-dog">
             <img src="assets/images/labrador3.png" alt="A labrador sitting" />
-          </li>
-          <li id="adoption-collar">
+          </div>
+          <div id="adoption-collar">
             <img
               src="assets/icons/collar.svg"
               alt="Drawing of a pet collar on the labrador" />
-          </li>
-          <li id="adoption-cat">
+          </div>
+          <div id="adoption-cat">
             <img
               src="assets/images/tabby-cat2.png"
               alt="A sickly looking tabby cat" />
-          </li>
-          <li id="adoption-bone">
+          </div>
+          <div id="adoption-bone">
             <img
               src="assets/icons/bone2.svg"
               alt="Drawing of a bone-shaped thought bubble" />
-          </li>
-        </ul>
+          </div>
+        </section>
         <section>
           <h3>Applicants must:</h3>
           <ul>
@@ -273,12 +273,12 @@
           <button class="button">Apply to Adopt</button>
         </section>
       </section>
-      <section>
-        <h2>
+      <section id="difference">
+        <header>
           <img src="assets/icons/heart2.svg" alt="Heart icon" />
-          How you can make a difference
+          <h2>How you can make a difference</h2>
           <img src="assets/icons/heart2.svg" alt="Heart icon" />
-        </h2>
+        </header>
         <nav>
           <ul>
             <li>
@@ -320,26 +320,39 @@
           </ul>
         </nav>
       </section>
-      <section>
+      <section id="adoptables">
         <hgroup>
           <h2>Find your <em>best friend</em> today!</h2>
           <p>Browse our adorable adoptables</p>
         </hgroup>
         <nav>
           <ul>
-            <li><a href="/adoptables">View Adoptables</a></li>
-            <li><button>Apply to Adopt</button></li>
+            <li><a class="button" href="/adoptables">View Adoptables</a></li>
+            <li><button class="button">Apply to Adopt</button></li>
           </ul>
         </nav>
-        <img src="assets/icons/fish.svg" alt="Drawing of a fish" /><img
-          src="assets/images/tabby-cat3.png"
-          alt="Tabby cat facing forward" /><img
-          src="assets/icons/bone3.svg"
-          alt="Drawing of a bone" /><img
-          src="assets/images/pug.png"
-          alt="Image of a pug" />
+        <div>
+          <img
+            id="adoptables-fish"
+            src="assets/icons/fish.svg"
+            alt="Drawing of a fish" />
+          <img
+            id="adoptables-cat"
+            src="assets/images/tabby-cat3.png"
+            alt="Tabby cat facing forward" />
+        </div>
+        <div>
+          <img
+            id="adoptables-bone"
+            src="assets/icons/bone3.svg"
+            alt="Drawing of a bone" />
+          <img
+            id="adoptables-dog"
+            src="assets/images/pug.png"
+            alt="Image of a pug" />
+        </div>
       </section>
-      <aside>
+      <aside id="newsletter">
         <hgroup>
           <h2>Subscribe to our newsletter</h2>
           <p>
@@ -349,10 +362,15 @@
         </hgroup>
         <form action="/" method="post">
           <p>
-            <label for="newsletter">E-mail:</label>
-            <input type="email" name="newsletter" id="newsletter" />
+            <label hidden for="email">E-mail:</label>
+            <input
+              aria-label="E-mail:"
+              type="email"
+              name="newsletter"
+              id="email"
+              placeholder="Enter your email" />
           </p>
-          <input type="submit" value="Subscribe" />
+          <input class="button" type="submit" value="Subscribe" />
         </form>
       </aside>
     </main>
