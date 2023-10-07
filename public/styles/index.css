@@ -557,7 +557,7 @@
   color: var(--yellow);
 }
 
-#adoptables p {
+#adoptables header p {
   color: var(--white);
   text-align: center;
   font-family: Poppins;
@@ -581,7 +581,7 @@
   border: 2px solid var(--white);
 }
 
-#adoptables > div {
+#adoptables > p {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -589,7 +589,7 @@
   inline-size: 300px;
 }
 
-#adoptables > div:nth-of-type(1) {
+#adoptables > p:nth-of-type(1) {
   order: -1;
 }
 
