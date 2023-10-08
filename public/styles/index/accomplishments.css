@@ -1,0 +1,113 @@
+#accomplishments {
+  padding-inline: var(--content-padding);
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 80px;
+  gap: 80px;
+}
+
+#accomplishments > h2 {
+  color: var(--white);
+  max-inline-size: 800px;
+}
+
+#accomplishments > dl {
+  display: grid;
+  gap: 20px 40px;
+  grid: repeat(2, 1fr) / repeat(3, 1fr);
+  margin: 0;
+}
+
+#accomplishments dt {
+  grid-row: 2;
+  color: var(--white);
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.64px;
+}
+
+#accomplishments dd {
+  color: var(--yellow);
+  margin: 0;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.28px;
+}
+
+#accomplishments .carousel {
+  --inline-size: 1200px;
+  --length: 4;
+  --item-inline-size: 250px;
+}
+
+#accomplishments .carousel-items li {
+  block-size: 250px;
+  align-items: end;
+}
+
+#accomplishments .carousel-items > ul img {
+  block-size: 90%;
+}
+
+#accomplishments .carousel-items > ul > :nth-child(5n + 1) {
+  background-color: var(--yellow-dark);
+  border-radius: 10%;
+}
+
+#accomplishments .carousel-items > ul > :nth-child(5n + 2) {
+  background-color: var(--green);
+  border-radius: 10% 50% 50% 50%;
+  justify-content: start;
+}
+
+#accomplishments .carousel-items > ul > :nth-child(5n + 3) {
+  background-color: var(--white);
+  border-radius: 10%;
+}
+
+#accomplishments .carousel-items > ul > :nth-child(5n + 4) {
+  background-color: var(--purple);
+  border-radius: 50% 10% 50% 50%;
+}
+
+#accomplishments .carousel-items > ul > :nth-child(5n) > img {
+  block-size: 250px;
+}
+
+@media (max-width: 430px) {
+  #accomplishments {
+    padding-block-end: 0;
+  }
+
+  #accomplishments dl {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+    margin-block-start: -32px;
+  }
+
+  #accomplishments :is(dt, dd):nth-of-type(1) {
+    order: 3;
+  }
+
+  #accomplishments :is(dt, dd):nth-of-type(2) {
+    order: 2;
+  }
+
+  #accomplishments dd:nth-of-type(n + 2) {
+    margin-block-start: 40px;
+  }
+
+  #accomplishments .carousel {
+    --inline-size: 100vi;
+    --length: 1;
+  }
+}

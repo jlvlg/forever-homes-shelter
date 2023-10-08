@@ -1,0 +1,121 @@
+#difference {
+  padding-inline: var(--content-padding);
+  padding-block: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  background-color: var(--black);
+}
+
+#difference h2 {
+  position: relative;
+  inline-size: 550px;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+}
+
+#difference h2 img:nth-of-type(1) {
+  position: absolute;
+  inset-inline-start: -250px;
+}
+
+#difference h2 img:nth-of-type(2) {
+  position: absolute;
+  transform: scaleX(-1);
+  inset-inline-end: -250px;
+}
+
+#difference ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+#difference li {
+  inline-size: 276px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 24px;
+  padding-block: 48px;
+  gap: 48px;
+  border-radius: 24px;
+  border: 2px solid var(--white);
+}
+
+#difference hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+#difference h3 {
+  color: var(--white);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: -0.48px;
+}
+
+#difference p {
+  color: var(--transparent-max);
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+}
+
+#difference a {
+  inline-size: 100%;
+  padding-inline: 24px;
+  padding-block: 16px;
+  color: var(--black);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  border-radius: 16px;
+}
+
+#difference li:nth-of-type(1) > a {
+  background-color: var(--green);
+}
+
+#difference li:nth-of-type(2) > a {
+  background-color: var(--yellow-dark);
+}
+
+#difference li:nth-of-type(3) > a {
+  color: var(--white);
+  background-color: var(--pink);
+}
+
+#difference li:nth-of-type(4) > a {
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+@media (max-width: 430px) {
+  #difference h2 {
+    inline-size: 100%;
+  }
+
+  #difference h2 img:nth-of-type(1) {
+    inset-inline-start: 20px;
+  }
+
+  #difference h2 img:nth-of-type(2) {
+    inset-inline-end: 20px;
+  }
+
+  #difference ul {
+    flex-wrap: wrap;
+  }
+}

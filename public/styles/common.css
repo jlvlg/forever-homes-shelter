@@ -3,6 +3,7 @@
 }
 
 html {
+  --content-padding: 7.5vi;
   --transparent-min: #ffffff30;
   --transparent-middle: #ffffff80;
   --transparent-max: #fffc;
@@ -47,8 +48,17 @@ body {
   margin: 0;
 }
 
+h2 {
+  text-align: center;
+  font-family: Poppins;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.12px;
+}
+
 #navbar {
-  margin-inline: 7.67vi;
+  margin-inline: var(--content-padding);
   color: var(--black);
   padding-block: 30px;
   border-block-end: 2px solid var(--black);
@@ -58,7 +68,9 @@ body {
 }
 
 #navbar-list,
-#navbar-home,
+#navbar-list ul,
+#navbar-logo,
+#navbar-logo > a,
 #navbar-phone {
   display: flex;
   justify-content: center;
@@ -67,12 +79,15 @@ body {
 
 #navbar-list {
   text-wrap: nowrap;
+  justify-content: space-between;
+}
+
+#navbar-list > :nth-child(1) > ul {
   gap: 20px;
 }
 
-#navbar-end {
-  margin-inline-start: auto;
-  margin-inline-end: 12px;
+#navbar-list > :nth-child(2) > ul {
+  gap: 32px;
 }
 
 #navbar-phone {
@@ -83,14 +98,14 @@ body {
   block-size: 24px;
 }
 
-#navbar-home {
-  gap: 16px;
+#navbar-logo {
+  block-size: 60px;
+  inline-size: 60px;
+  margin-inline-end: -4px;
 }
 
-#navbar-home > img {
+#navbar-logo img {
   block-size: 48px;
-  margin-inline: 12px;
-  margin-block: 12px;
 }
 
 .button {
@@ -104,6 +119,7 @@ body {
   padding-inline: 32px;
   font-family: Poppins, sans-serif;
   font-size: 20px;
+  font-weight: 700;
   line-height: 28px;
 }
 
@@ -119,7 +135,7 @@ body {
 
 #main-footer {
   margin-block: 80px 60px;
-  padding-inline: 7.67vi;
+  padding-inline: var(--content-padding);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -145,6 +161,7 @@ body {
   text-transform: uppercase;
   max-inline-size: 180px;
   margin: 0;
+  text-align: start;
   line-height: 100%;
   font-size: 36px;
 }
@@ -183,8 +200,7 @@ body {
 }
 
 #slogan {
-  padding-block-start: 60px;
-  margin-block-end: 80px;
+  padding-block: 60px 80px;
   border-block-start: 2px solid var(--black);
   text-align: center;
   color: var(--black);
@@ -193,10 +209,149 @@ body {
   font-weight: 700;
   line-height: 160%; /* 51.2px */
   letter-spacing: -0.64px;
-  margin-inline: 7.67vi;
+  margin-inline: var(--content-padding);
 }
 
 #slogan > em {
   font-style: normal;
   color: var(--pink);
+}
+
+.carousel {
+  --length: 0;
+  --item-inline-size: 0;
+  --inline-size: 0;
+  --gap: calc(
+    (var(--inline-size) - var(--item-inline-size) * var(--length) - 95px) /
+      (var(--length) + 1)
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px var(--gap);
+  inline-size: var(--inline-size);
+}
+
+.carousel-arrow {
+  display: flex;
+  block-size: 45px;
+  inline-size: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--gray-light);
+}
+
+.carousel-arrow > img {
+  block-size: 24px;
+}
+
+.carousel-items {
+  overflow: hidden;
+  inline-size: calc(
+    var(--length) * var(--item-inline-size) + var(--gap) * (var(--length) - 1)
+  );
+}
+
+.carousel-items ul {
+  display: flex;
+  inline-size: fit-content;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.carousel-items li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  inline-size: var(--item-inline-size);
+  overflow: hidden;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-basis: 100%;
+}
+
+.carousel-dots > div {
+  block-size: 16px;
+  inline-size: 16px;
+  border-radius: 50%;
+  background-color: var(--transparent-min);
+}
+
+@media (max-width: 430px) {
+  html {
+    --content-padding: 3.75vi;
+  }
+
+  section h2 {
+    font-size: 48px;
+    letter-spacing: -0.96px;
+  }
+
+  #navbar-list > :nth-child(1) > ul,
+  #navbar ul {
+    flex-wrap: wrap;
+  }
+
+  #navbar-logo {
+    flex-basis: 100%;
+    margin-inline: 0;
+    margin-block-end: -20px;
+  }
+
+  #navbar-list {
+    gap: 12px;
+  }
+
+  #navbar-list > :nth-child(2) {
+    flex-basis: 100%;
+  }
+
+  #navbar-list > :nth-child(2) > ul {
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+  #main-footer {
+    margin-block-end: 32px;
+    gap: 40px 0;
+  }
+
+  #main-footer-brand {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  #main-footer-name {
+    text-align: center;
+    position: relative;
+  }
+
+  #main-footer-heart-icon {
+    position: absolute;
+    inset-block-start: unset;
+    inset-inline-end: -10px;
+    inset-block-end: 2px;
+  }
+
+  #main-footer > nav > ul {
+    gap: 16px;
+  }
+
+  #contact-info {
+    flex-basis: 100%;
+  }
+
+  #contact-info > nav {
+    align-self: center;
+  }
+
+  #slogan {
+    padding-block-start: 32px;
+  }
 }

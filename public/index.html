@@ -9,67 +9,81 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/index/accomplishments.css" />
+    <link rel="stylesheet" href="styles/index/adoptables.css" />
+    <link rel="stylesheet" href="styles/index/adoption.css" />
+    <link rel="stylesheet" href="styles/index/difference.css" />
+    <link rel="stylesheet" href="styles/index/landing.css" />
+    <link rel="stylesheet" href="styles/index/newsletter.css" />
+    <link rel="stylesheet" href="styles/index/services.css" />
     <title>Forever Homes Shelter</title>
   </head>
   <body>
     <nav id="navbar">
       <ul id="navbar-list">
         <li>
-          <a id="navbar-home" href="/">
-            <img
-              src="assets/icons/logo.svg"
-              alt="Forever Homes Shelter Logotype" />
-            Rescue center
-          </a>
+          <ul>
+            <li id="navbar-logo">
+              <a href="/">
+                <img
+                  src="assets/icons/logo.svg"
+                  alt="Forever Homes Shelter Logotype" />
+              </a>
+            </li>
+            <li>
+              <a href="/"> Rescue center </a>
+            </li>
+            <li>
+              <button>Apply to adopt</button>
+            </li>
+            <li><a href="">Volunteer</a></li>
+            <li><a href="">Ways to give</a></li>
+            <li><a href="">Events</a></li>
+          </ul>
         </li>
         <li>
-          <button>Apply to adopt</button>
-        </li>
-        <li><a href="">Volunteer</a></li>
-        <li><a href="">Ways to give</a></li>
-        <li><a href="">Events</a></li>
-        <li id="navbar-end">
-          <a id="navbar-phone" href="">
-            <img src="assets/icons/phone.svg" alt="Old telephone icon" />
-            631-249-7325
-          </a>
-        </li>
-        <li>
-          <button class="button donate-button">
-            <img src="assets/icons/heart.svg" alt="Heart icon" />
-            Donate
-          </button>
+          <ul>
+            <li>
+              <a id="navbar-phone" href="">
+                <img src="assets/icons/phone.svg" alt="Old telephone icon" />
+                631-249-7325
+              </a>
+            </li>
+            <li>
+              <button class="button donate-button">
+                <img src="assets/icons/heart.svg" alt="Heart icon" />
+                Donate
+              </button>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>
     <main>
       <section id="landing">
-        <section id="landing-info">
-          <h1>Forever Homes Shelter</h1>
-          <p>
-            Our mission is to rescue and provide rehabilitation to dogs and cats
-            that are critically injured or neglected. We have already saved the
-            lives of 10,000 animals. We are not just a rescue, we are a refuge.
-          </p>
-          <em>Your Gift Helps Save Lives</em>
-          <nav>
-            <ul>
-              <li>
-                <button class="button donate-button">
-                  <img src="assets/icons/heart.svg" alt="Heart icon" />
-                  Donate
-                </button>
-              </li>
-              <li>
-                <button id="landing-adopt" class="button">
-                  <img src="assets/icons/dog.svg" alt="Dog icon" />
-                  Apply to Adopt
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </section>
+        <h1>Forever Homes Shelter</h1>
+        <p>
+          Our mission is to rescue and provide rehabilitation to dogs and cats
+          that are critically injured or neglected. We have already saved the
+          lives of 10,000 animals. We are not just a rescue, we are a refuge.
+        </p>
+        <em>Your Gift Helps Save Lives</em>
+        <nav>
+          <ul>
+            <li>
+              <button class="button donate-button">
+                <img src="assets/icons/heart.svg" alt="Heart icon" />
+                Donate
+              </button>
+            </li>
+            <li>
+              <button id="landing-adopt" class="button">
+                <img src="assets/icons/dog.svg" alt="Dog icon" />
+                Apply to Adopt
+              </button>
+            </li>
+          </ul>
+        </nav>
         <section id="landing-photos">
           <div id="landing-cat">
             <img src="assets/images/tabby-cat.png" alt="Tabby cat looking up" />
@@ -99,135 +113,158 @@
           <dt>Tails Found a Home</dt>
           <dd>940</dd>
         </dl>
-        <div data-index="1" id="carousel">
-          <div class="carousel-arrow">
+        <ul data-index="1" class="carousel">
+          <li class="carousel-arrow">
             <img src="assets/icons/arrow-left.svg" alt="Arrow to the left" />
-          </div>
-          <ul>
-            <li>
-              <img
-                src="assets/images/orange-cat.png"
-                alt="Orange cat facing forward" />
-            </li>
-            <li>
-              <img
-                src="assets/images/white-cat.png"
-                alt="White cat with orange spots licking its face" />
-            </li>
-            <li>
-              <img
-                src="assets/images/labrador1.png"
-                alt="Labrador facing forward" />
-            </li>
-            <li>
-              <img src="assets/images/samoyed.png" alt="Samoyed smiling" />
-            </li>
-            <li>
-              <!-- Squished dog lol  -->
-              <img src="assets/images/labrador2.png" alt="Labrador sitting" />
-            </li>
-            <li>
-              <img
-                src="assets/images/orange-cat.png"
-                alt="Orange cat facing forward" />
-            </li>
-            <li>
-              <img
-                src="assets/images/white-cat.png"
-                alt="White cat with orange spots licking its face" />
-            </li>
-            <li>
-              <img
-                src="assets/images/labrador1.png"
-                alt="Labrador facing forward" />
-            </li>
-          </ul>
-          <div class="carousel-arrow">
+          </li>
+          <li class="carousel-items">
+            <ul>
+              <li>
+                <img
+                  src="assets/images/orange-cat.png"
+                  alt="Orange cat facing forward" />
+              </li>
+              <li>
+                <img
+                  src="assets/images/white-cat.png"
+                  alt="White cat with orange spots licking its face" />
+              </li>
+              <li>
+                <img
+                  src="assets/images/labrador1.png"
+                  alt="Labrador facing forward" />
+              </li>
+              <li>
+                <img src="assets/images/samoyed.png" alt="Samoyed smiling" />
+              </li>
+              <li>
+                <!-- Squished dog lol  -->
+                <img src="assets/images/labrador2.png" alt="Labrador sitting" />
+              </li>
+              <li>
+                <img
+                  src="assets/images/orange-cat.png"
+                  alt="Orange cat facing forward" />
+              </li>
+              <li>
+                <img
+                  src="assets/images/white-cat.png"
+                  alt="White cat with orange spots licking its face" />
+              </li>
+              <li>
+                <img
+                  src="assets/images/labrador1.png"
+                  alt="Labrador facing forward" />
+              </li>
+            </ul>
+          </li>
+          <li class="carousel-arrow">
             <img src="assets/icons/arrow-right.svg" alt="Arrow to the right" />
-          </div>
-          <div id="carousel-dots">
+          </li>
+          <li class="carousel-dots">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </section>
       <section id="services">
         <h2>With your donations we provide</h2>
-        <ul>
-          <li>
-            <h3>
-              Shelter
-              <img
-                src="assets/icons/house.svg"
-                alt="Drawing of a house with a heart inside" />
-            </h3>
-            <p>
-              We provide shelter for many of our cats and dogs. In addition to a
-              roof over their heads, we pay for heat, food, water, and
-              electricity, and general maintenance.
-            </p>
+        <ul class="carousel">
+          <li class="carousel-arrow">
+            <img src="assets/icons/arrow-left.svg" alt="Arrow to the left" />
           </li>
-          <li>
-            <h3>
-              Vetting
-              <img src="assets/icons/health.svg" alt="Drawing of a cross" />
-            </h3>
-            <p>
-              We provide vet care to our cats and dogs. We take care of general
-              health assessments medications, vaccinations, spay/neuter
-              procedures, and other surgeries.
-            </p>
+          <li class="carousel-items">
+            <ul>
+              <li>
+                <h3>
+                  Shelter
+                  <img
+                    src="assets/icons/house.svg"
+                    alt="Drawing of a house with a heart inside" />
+                </h3>
+                <p>
+                  We provide shelter for many of our cats and dogs. In addition
+                  to a roof over their heads, we pay for heat, food, water, and
+                  electricity, and general maintenance.
+                </p>
+              </li>
+              <li>
+                <h3>
+                  Vetting
+                  <img src="assets/icons/health.svg" alt="Drawing of a cross" />
+                </h3>
+                <p>
+                  We provide vet care to our cats and dogs. We take care of
+                  general health assessments medications, vaccinations,
+                  spay/neuter procedures, and other surgeries.
+                </p>
+              </li>
+              <li>
+                <h3>
+                  Facilities
+                  <img
+                    src="assets/icons/building.svg"
+                    alt="Drawing of a building" />
+                </h3>
+                <p>
+                  We currently utilize a facility in a dilapidated state, which
+                  has necessitated significant investments to make it usable
+                  again. We are still restoring the building to its full
+                  potential.
+                </p>
+              </li>
+              <li>
+                <h3>
+                  Transport
+                  <img
+                    src="assets/icons/carrier.svg"
+                    alt="Drawing of a pet carrier" />
+                </h3>
+                <p>
+                  Each year, we transport over 600 dogs and 350 cats from kill
+                  shelters and emergency distressing situations to hospitals or
+                  our shelter, providing them with a second chance at life.
+                </p>
+              </li>
+              <li>
+                <h3>
+                  Fosters
+                  <img
+                    src="assets/icons/smile.svg"
+                    alt="Drawing of a smile face" />
+                </h3>
+                <p>
+                  We're lucky to have a group of individuals who generously
+                  foster our cats and dogs in their homes. We cover all their
+                  veterinary needs and provide necessary food supplies.
+                </p>
+              </li>
+              <li>
+                <h3>
+                  Food
+                  <img src="assets/icons/bone.svg" alt="Drawing of a bone" />
+                </h3>
+                <p>
+                  Each year, we nourish our cats and dogs with over 2,200 cans
+                  of wet food and 1,600 pounds of dry food to ensure their
+                  well-being and keep them content and thriving.
+                </p>
+              </li>
+            </ul>
           </li>
-          <li>
-            <h3>
-              Facilities
-              <img
-                src="assets/icons/building.svg"
-                alt="Drawing of a building" />
-            </h3>
-            <p>
-              We currently utilize a facility in a dilapidated state, which has
-              necessitated significant investments to make it usable again. We
-              are still restoring the building to its full potential.
-            </p>
+          <li class="carousel-arrow">
+            <img src="assets/icons/arrow-right.svg" alt="Arrow to the right" />
           </li>
-          <li>
-            <h3>
-              Transport
-              <img
-                src="assets/icons/carrier.svg"
-                alt="Drawing of a pet carrier" />
-            </h3>
-            <p>
-              Each year, we transport over 600 dogs and 350 cats from kill
-              shelters and emergency distressing situations to hospitals or our
-              shelter, providing them with a second chance at life.
-            </p>
-          </li>
-          <li>
-            <h3>
-              Fosters
-              <img src="assets/icons/smile.svg" alt="Drawing of a smile face" />
-            </h3>
-            <p>
-              We're lucky to have a group of individuals who generously foster
-              our cats and dogs in their homes. We cover all their veterinary
-              needs and provide necessary food supplies.
-            </p>
-          </li>
-          <li>
-            <h3>
-              Food
-              <img src="assets/icons/bone.svg" alt="Drawing of a bone" />
-            </h3>
-            <p>
-              Each year, we nourish our cats and dogs with over 2,200 cans of
-              wet food and 1,600 pounds of dry food to ensure their well-being
-              and keep them content and thriving.
-            </p>
+          <li class="carousel-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </li>
         </ul>
       </section>
@@ -274,11 +311,11 @@
         </section>
       </section>
       <section id="difference">
-        <header>
+        <h2>
           <img src="assets/icons/heart2.svg" alt="Heart icon" />
-          <h2>How you can make a difference</h2>
+          How you can make a difference
           <img src="assets/icons/heart2.svg" alt="Heart icon" />
-        </header>
+        </h2>
         <nav>
           <ul>
             <li>
@@ -458,6 +495,12 @@
     <aside id="slogan">
       We are not just a rescue, <em>we are a refuge</em>
     </aside>
-    <!-- TODO Create modals for adoption and donation -->
+    <dialog open id="adopt-modal">
+      <hgroup>
+        <h2></h2>
+        <p></p>
+      </hgroup>
+      <form action=""></form>
+    </dialog>
   </body>
 </html>
