@@ -1,0 +1,202 @@
+.modal::backdrop {
+  background-color: #0007;
+  transition: background 300ms ease-out;
+}
+
+.modal {
+  transition: all 300ms ease-out;
+  position: fixed;
+  inset-block: 0 0;
+  margin-block: auto auto;
+  inset-inline-end: calc(-100% - 430px);
+  border: none;
+  border-radius: 32px;
+  padding-block: 32px;
+  padding-inline: 32px;
+  inline-size: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.modal[open] {
+  inset-inline: 0 0;
+  margin-inline: auto auto;
+}
+
+.modal hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+}
+
+.modal h2 {
+  font-size: 48px;
+  letter-spacing: -0.96px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.modal form > p {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modal form > :nth-child(-n + 2) label,
+.modal legend {
+  color: var(--pink);
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+#adopt-modal form :nth-child(-n + 3) :is(input, select),
+#donate-modal form > :nth-child(-n + 2) :is(input, select),
+.radio {
+  display: flex;
+  padding-inline: 16px;
+  padding-block: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--blue-light);
+  background: var(--white);
+  align-items: center;
+}
+
+.modal :is(label, legend) em {
+  color: var(--blue-light);
+}
+
+.modal fieldset {
+  display: flex;
+  gap: 8px;
+  color: var(--gray-dark);
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  /* It doesn't work :( */
+}
+
+#adopt-modal label[for="adopt-modal-terms"] {
+  color: var(--black);
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+#adopt-modal label[for="adopt-modal-terms"] a {
+  color: var(--pink);
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.modal .checkbox {
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 12px;
+}
+
+.modal :is(input[type="checkbox"], input[type="radio"]) {
+  display: flex;
+  order: -1;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background: var(--gray-dark, #37383f);
+  transition: all 300ms ease-out;
+}
+
+.modal :is(input[type="checkbox"], input[type="radio"]):checked {
+  background: var(--green);
+}
+
+.modal :is(.checkbox, .radio) img {
+  visibility: hidden;
+  transition: all 300ms ease-out;
+  pointer-events: none;
+  position: absolute;
+  inset-inline-start: 5px;
+}
+
+.modal :is(input[type="checkbox"], input[type="radio"]) + img {
+  visibility: visible;
+}
+
+#adopt-modal button {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: -12px;
+  gap: 8px;
+  border-radius: 8px;
+  background: var(--green);
+  color: var(--gray-light);
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+}
+
+#adopt-modal button:nth-of-type(2) {
+  background-color: var(--gray-dark);
+}
+
+#donate-modal fieldset {
+  display: flex;
+  align-items: center;
+}
+
+.radio {
+  flex: 1;
+  position: relative;
+  flex-direction: row;
+  block-size: min-content;
+  justify-content: space-between;
+}
+
+.radio label {
+  order: -1;
+}
+
+#donate-modal .button {
+  inline-size: fit-content;
+  block-size: 64px;
+  align-self: center;
+}
+
+#donate-modal button:nth-of-type(2) {
+  color: var(--white);
+  background-color: var(--gray-dark);
+}
+
+#donate-modal .radio img {
+  inset-inline-start: unset;
+  inset-inline-end: 20px;
+}

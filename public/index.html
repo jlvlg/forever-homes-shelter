@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/index/landing.css" />
     <link rel="stylesheet" href="styles/index/newsletter.css" />
     <link rel="stylesheet" href="styles/index/services.css" />
+    <link rel="stylesheet" href="styles/modals.css" />
     <title>Forever Homes Shelter</title>
   </head>
   <body>
@@ -365,7 +366,9 @@
           </hgroup>
           <nav>
             <ul>
-              <li><a class="button" href="/adoptables">View Adoptables</a></li>
+              <li>
+                <a class="button" href="/adoptables">View Adoptables</a>
+              </li>
               <li><button class="button">Apply to Adopt</button></li>
             </ul>
           </nav>
@@ -495,12 +498,111 @@
     <aside id="slogan">
       We are not just a rescue, <em>we are a refuge</em>
     </aside>
-    <dialog open id="adopt-modal">
+    <dialog class="modal" id="adopt-modal">
       <hgroup>
-        <h2></h2>
-        <p></p>
+        <h2>Apply to Adopt</h2>
+        <p>Small text description can goes here</p>
       </hgroup>
-      <form action=""></form>
+      <form action="/success" method="post">
+        <p>
+          <label for="adopt-modal-email">Email<em>*</em></label>
+          <input required id="adopt-modal-email" type="email" name="email" />
+        </p>
+        <p>
+          <label for="adopt-modal-name">Full name<em>*</em></label>
+          <input required id="adopt-modal-name" type="text" name="name" />
+        </p>
+        <fieldset>
+          <legend>Date of birth<em>*</em></legend>
+          <p>
+            <label hidden for="adopt-modal-day">Day</label>
+            <select required aria-label="Day" name="day" id="adopt-modal-day">
+              <option selected disabled hidden>Day</option>
+            </select>
+          </p>
+          <p>
+            <label hidden for="adopt-modal-month">Month</label>
+            <select
+              required
+              aria-label="Month"
+              name="month"
+              id="adopt-modal-month">
+              <option selected disabled hidden>Month</option>
+            </select>
+          </p>
+          <p>
+            <label hidden for="adopt-modal-year">Year</label>
+            <select
+              required
+              aria-label="Year"
+              name="year"
+              id="adopt-modal-year">
+              <option selected disabled hidden>Year</option>
+            </select>
+          </p>
+        </fieldset>
+        <p class="checkbox">
+          <label for="adopt-modal-terms">
+            I agree with <a href="">Privacy Policy</a> and
+            <a href="">Terms of Conditions</a>
+          </label>
+          <input type="checkbox" name="Terms" id="adopt-modal-terms" />
+          <img src="assets/icons/check.svg" alt="check" />
+        </p>
+        <button>
+          <img src="assets/icons/dog-white.svg" alt="Dog" />
+          I wanna Adopt!
+        </button>
+        <button>
+          <img src="assets/icons/caret.svg" alt="Cancel" />
+          Cancel
+        </button>
+      </form>
+    </dialog>
+    <dialog class="modal" id="donate-modal">
+      <hgroup>
+        <h2>Choose your Donate</h2>
+      </hgroup>
+      <form action="/success" method="post">
+        <p>
+          <label for="donate-modal-email">Email<em>*</em></label>
+          <input required id="donate-modal-email" type="email" name="email" />
+        </p>
+        <p>
+          <label for="donate-modal-name">Full name<em>*</em></label>
+          <input required id="donate-modal-name" type="text" name="name" />
+        </p>
+        <fieldset>
+          <legend>Payment method<em>*</em></legend>
+          <p class="radio">
+            <label for="donate-pix">Pix</label>
+            <input type="radio" name="payment" id="donate-pix" value="pix" />
+            <img src="assets/icons/check.svg" alt="Check" />
+          </p>
+          <p class="radio">
+            <label for="donate-card">Credit Card</label>
+            <input type="radio" name="payment" id="donate-card" value="card" />
+            <img src="assets/icons/check.svg" alt="Check" />
+          </p>
+          <p class="radio">
+            <label for="donate-paypal">Paypal</label>
+            <input
+              type="radio"
+              name="payment"
+              id="donate-paypal"
+              value="paypal" />
+            <img src="assets/icons/check.svg" alt="Check" />
+          </p>
+        </fieldset>
+        <button class="button donate-button">
+          <img src="assets/icons/heart.svg" alt="Dog" />
+          I wanna Adopt!
+        </button>
+        <button class="button">
+          <img src="assets/icons/caret.svg" alt="Cancel" />
+          Cancel
+        </button>
+      </form>
     </dialog>
   </body>
 </html>
