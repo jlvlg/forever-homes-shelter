@@ -1,4 +1,4 @@
-# forever-homes-shelter
+# Forever Homes Shelter
 
 We are a non-profit organization aiming at providing shelter for stray animals
 
