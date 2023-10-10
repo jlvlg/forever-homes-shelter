@@ -256,7 +256,9 @@ h2 {
 }
 
 .carousel-items ul {
+  transition: all 300ms;
   display: flex;
+  position: relative;
   inline-size: fit-content;
   justify-content: space-between;
   gap: var(--gap);
@@ -278,6 +280,8 @@ h2 {
 }
 
 .carousel-dots > div {
+  transition: all 300ms;
+  position: relative;
   block-size: 16px;
   inline-size: 16px;
   border-radius: 50%;

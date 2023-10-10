@@ -35,7 +35,7 @@
               <a href="/"> Rescue center </a>
             </li>
             <li>
-              <button>Apply to adopt</button>
+              <button class="open-adopt">Apply to adopt</button>
             </li>
             <li><a href="">Volunteer</a></li>
             <li><a href="">Ways to give</a></li>
@@ -51,7 +51,7 @@
               </a>
             </li>
             <li>
-              <button class="button donate-button">
+              <button class="button donate-button open-donate">
                 <img src="assets/icons/heart.svg" alt="Heart icon" />
                 Donate
               </button>
@@ -72,13 +72,13 @@
         <nav>
           <ul>
             <li>
-              <button class="button donate-button">
+              <button class="button donate-button open-donate">
                 <img src="assets/icons/heart.svg" alt="Heart icon" />
                 Donate
               </button>
             </li>
             <li>
-              <button id="landing-adopt" class="button">
+              <button id="landing-adopt" class="button open-adopt">
                 <img src="assets/icons/dog.svg" alt="Dog icon" />
                 Apply to Adopt
               </button>
@@ -114,7 +114,7 @@
           <dt>Tails Found a Home</dt>
           <dd>940</dd>
         </dl>
-        <ul data-index="1" class="carousel">
+        <ul data-index="0" class="carousel">
           <li class="carousel-arrow">
             <img src="assets/icons/arrow-left.svg" alt="Arrow to the left" />
           </li>
@@ -173,7 +173,7 @@
       </section>
       <section id="services">
         <h2>With your donations we provide</h2>
-        <ul class="carousel">
+        <ul data-index="0" class="carousel">
           <li class="carousel-arrow">
             <img src="assets/icons/arrow-left.svg" alt="Arrow to the left" />
           </li>
@@ -308,7 +308,7 @@
             </li>
             <li>Be ready to adopt within 7-10 days</li>
           </ul>
-          <button class="button">Apply to Adopt</button>
+          <button class="button open-adopt">Apply to Adopt</button>
         </section>
       </section>
       <section id="difference">
@@ -369,7 +369,7 @@
               <li>
                 <a class="button" href="/adoptables">View Adoptables</a>
               </li>
-              <li><button class="button">Apply to Adopt</button></li>
+              <li><button class="button open-adopt">Apply to Adopt</button></li>
             </ul>
           </nav>
         </header>
@@ -402,7 +402,7 @@
             stories of animals finding their forever homes.
           </p>
         </hgroup>
-        <form action="/" method="post">
+        <form action="/success" method="get">
           <p>
             <label hidden for="email">E-mail:</label>
             <input
@@ -503,7 +503,7 @@
         <h2>Apply to Adopt</h2>
         <p>Small text description can goes here</p>
       </hgroup>
-      <form action="/success" method="post">
+      <form action="/success" method="get">
         <p>
           <label for="adopt-modal-email">Email<em>*</em></label>
           <input required id="adopt-modal-email" type="email" name="email" />
@@ -546,14 +546,14 @@
             I agree with <a href="">Privacy Policy</a> and
             <a href="">Terms of Conditions</a>
           </label>
-          <input type="checkbox" name="Terms" id="adopt-modal-terms" />
+          <input required type="checkbox" name="Terms" id="adopt-modal-terms" />
           <img src="assets/icons/check.svg" alt="check" />
         </p>
         <button>
           <img src="assets/icons/dog-white.svg" alt="Dog" />
           I wanna Adopt!
         </button>
-        <button>
+        <button id="close-adopt">
           <img src="assets/icons/caret.svg" alt="Cancel" />
           Cancel
         </button>
@@ -563,14 +563,16 @@
       <hgroup>
         <h2>Choose your Donate</h2>
       </hgroup>
-      <form action="/success" method="post">
+      <form action="/success" method="get">
         <p>
           <label for="donate-modal-email">Email<em>*</em></label>
           <input required id="donate-modal-email" type="email" name="email" />
         </p>
         <p>
-          <label for="donate-modal-name">Full name<em>*</em></label>
-          <input required id="donate-modal-name" type="text" name="name" />
+          <label for="donate-modal-amount">
+            How much can you help?<em>*</em>
+          </label>
+          <input required id="donate-modal-amount" type="number" name="name" />
         </p>
         <fieldset>
           <legend>Payment method<em>*</em></legend>
@@ -596,13 +598,15 @@
         </fieldset>
         <button class="button donate-button">
           <img src="assets/icons/heart.svg" alt="Dog" />
-          I wanna Adopt!
+          I wanna Help!
         </button>
-        <button class="button">
+        <button id="close-donate" class="button">
           <img src="assets/icons/caret.svg" alt="Cancel" />
           Cancel
         </button>
       </form>
     </dialog>
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/modals.js"></script>
   </body>
 </html>

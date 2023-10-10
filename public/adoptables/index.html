@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Poppins:wght@400;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="../styles/common.css" />
+    <link rel="stylesheet" href="../styles/modals.css" />
     <link rel="stylesheet" href="../styles/adoptables/index.css" />
     <title>Forever Homes Shelter</title>
   </head>
@@ -28,7 +29,7 @@
               <a href="/"> Rescue center </a>
             </li>
             <li>
-              <button>Apply to adopt</button>
+              <button class="open-adopt">Apply to adopt</button>
             </li>
             <li><a href="">Volunteer</a></li>
             <li><a href="">Ways to give</a></li>
@@ -44,7 +45,7 @@
               </a>
             </li>
             <li>
-              <button class="button donate-button">
+              <button class="button donate-button open-donate">
                 <img src="../assets/icons/heart.svg" alt="Heart icon" />
                 Donate
               </button>
@@ -53,7 +54,7 @@
         </li>
       </ul>
     </nav>
-    <section id="pets">
+    <main id="pets">
       <a href="/" class="button">
         <img src="../assets/icons/caret.svg" alt="" />
         Back
@@ -125,7 +126,7 @@
           </a>
         </li>
       </ul>
-    </section>
+    </main>
     <footer id="main-footer">
       <section id="main-footer-brand">
         <img
@@ -208,5 +209,114 @@
     <aside id="slogan">
       We are not just a rescue, <em>we are a refuge</em>
     </aside>
+    <dialog class="modal" id="adopt-modal">
+      <hgroup>
+        <h2>Apply to Adopt</h2>
+        <p>Small text description can goes here</p>
+      </hgroup>
+      <form action="/success" method="get">
+        <p>
+          <label for="adopt-modal-email">Email<em>*</em></label>
+          <input required id="adopt-modal-email" type="email" name="email" />
+        </p>
+        <p>
+          <label for="adopt-modal-name">Full name<em>*</em></label>
+          <input required id="adopt-modal-name" type="text" name="name" />
+        </p>
+        <fieldset>
+          <legend>Date of birth<em>*</em></legend>
+          <p>
+            <label hidden for="adopt-modal-day">Day</label>
+            <select required aria-label="Day" name="day" id="adopt-modal-day">
+              <option selected disabled hidden>Day</option>
+            </select>
+          </p>
+          <p>
+            <label hidden for="adopt-modal-month">Month</label>
+            <select
+              required
+              aria-label="Month"
+              name="month"
+              id="adopt-modal-month">
+              <option selected disabled hidden>Month</option>
+            </select>
+          </p>
+          <p>
+            <label hidden for="adopt-modal-year">Year</label>
+            <select
+              required
+              aria-label="Year"
+              name="year"
+              id="adopt-modal-year">
+              <option selected disabled hidden>Year</option>
+            </select>
+          </p>
+        </fieldset>
+        <p class="checkbox">
+          <label for="adopt-modal-terms">
+            I agree with <a href="">Privacy Policy</a> and
+            <a href="">Terms of Conditions</a>
+          </label>
+          <input required type="checkbox" name="Terms" id="adopt-modal-terms" />
+          <img src="../assets/icons/check.svg" alt="check" />
+        </p>
+        <button>
+          <img src="../assets/icons/dog-white.svg" alt="Dog" />
+          I wanna Adopt!
+        </button>
+        <button id="close-adopt">
+          <img src="../assets/icons/caret.svg" alt="Cancel" />
+          Cancel
+        </button>
+      </form>
+    </dialog>
+    <dialog class="modal" id="donate-modal">
+      <hgroup>
+        <h2>Choose your Donate</h2>
+      </hgroup>
+      <form action="/success" method="get">
+        <p>
+          <label for="donate-modal-email">Email<em>*</em></label>
+          <input required id="donate-modal-email" type="email" name="email" />
+        </p>
+        <p>
+          <label for="donate-modal-amount">
+            How much can you help?<em>*</em>
+          </label>
+          <input required id="donate-modal-amount" type="number" name="name" />
+        </p>
+        <fieldset>
+          <legend>Payment method<em>*</em></legend>
+          <p class="radio">
+            <label for="donate-pix">Pix</label>
+            <input type="radio" name="payment" id="donate-pix" value="pix" />
+            <img src="../assets/icons/check.svg" alt="Check" />
+          </p>
+          <p class="radio">
+            <label for="donate-card">Credit Card</label>
+            <input type="radio" name="payment" id="donate-card" value="card" />
+            <img src="../assets/icons/check.svg" alt="Check" />
+          </p>
+          <p class="radio">
+            <label for="donate-paypal">Paypal</label>
+            <input
+              type="radio"
+              name="payment"
+              id="donate-paypal"
+              value="paypal" />
+            <img src="../assets/icons/check.svg" alt="Check" />
+          </p>
+        </fieldset>
+        <button class="button donate-button">
+          <img src="../assets/icons/heart.svg" alt="Dog" />
+          I wanna Help!
+        </button>
+        <button id="close-donate" class="button">
+          <img src="../assets/icons/caret.svg" alt="Cancel" />
+          Cancel
+        </button>
+      </form>
+    </dialog>
+    <script type="module" src="../js/modals.js"></script>
   </body>
 </html>

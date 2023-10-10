@@ -1,6 +1,15 @@
+@keyframes modal {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #0007;
+  }
+}
+
 .modal::backdrop {
   background-color: #0007;
-  transition: background 300ms ease-out;
+  animation: modal 300ms ease-out;
 }
 
 .modal {
@@ -74,7 +83,7 @@
   padding-block: 16px;
   border-radius: 8px;
   border: 1px solid var(--blue-light);
-  background: var(--white);
+  background-color: var(--white);
   align-items: center;
 }
 
@@ -85,13 +94,26 @@
 .modal fieldset {
   display: flex;
   gap: 8px;
+}
+
+.modal fieldset p,
+.modal fieldset p select {
+  appearance: none;
   color: var(--gray-dark);
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.32px;
-  /* It doesn't work :( */
+  flex: 1;
+  inline-size: 100%;
+}
+
+.modal fieldset select {
+  background-image: url("../assets/icons/expand.svg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right 10px top 18px;
 }
 
 #adopt-modal label[for="adopt-modal-terms"] {
@@ -143,7 +165,7 @@
   inset-inline-start: 5px;
 }
 
-.modal :is(input[type="checkbox"], input[type="radio"]) + img {
+.modal :is(input[type="checkbox"], input[type="radio"]):checked + img {
   visibility: visible;
 }
 
@@ -199,4 +221,8 @@
 #donate-modal .radio img {
   inset-inline-start: unset;
   inset-inline-end: 20px;
+}
+
+#donate-modal-amount {
+  text-align: end;
 }

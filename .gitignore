@@ -2,5 +2,5 @@
 node_modules
 .envrc
 .tool-versions
-public/*.js
-public/*.js.*
+public/js
+public/
